@@ -1,5 +1,9 @@
 " Easy version Vimrc
 "
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 
 set nocompatible
 filetype off
@@ -28,7 +32,10 @@ Bundle 'Shougo/neosnippet'
 Bundle 'scrooloose/nerdtree'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'AndrewRadev/splitjoin.vim'
+
 Bundle 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType="<c-n>"
+
 Bundle 'terhechte/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
@@ -146,9 +153,11 @@ imap <C-a> <Home>
 imap <C-e> <End>
 imap <S-CR> <End>;
 
+" imap { {<CR>}<Up><CR>
+
 " set gui font
-set guifont=Monaco:h14
-set guifontwide=Monaco:h14
+set guifont=Monaco:h15
+set guifontwide=Monaco:h15
 
 " set encoding
 set encoding=utf-8

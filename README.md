@@ -1,5 +1,4 @@
 **This Vim configurations base form [kaochenlong/eddie-vim](https://github.com/kaochenlong/eddie-vim)**
-
 My personal Vim configurations and some plugins which I used in my daily job.
 
 I put Vim related settings in `plugin/settings/Settings.vim`, and isolate other plugins' settings in `plugin/settings` directory.
