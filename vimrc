@@ -171,7 +171,7 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_list = 20
 let g:neocomplcache_plugin_disable = {'include_complete' : 1, 'filename_complete' : 1}
 let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_auto_completion_start_length = 3
+let g:neocomplcache_auto_completion_start_length = 1
 let g:neosnippet#snippets_directory = expand("~/.vim/snippets")
 if !exists('g:neocomplcache_omni_functions')
     let g:neocomplcache_omni_functions = {}
@@ -187,6 +187,10 @@ let g:neocomplcache_force_omni_patterns.c ='[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 let g:neocomplcache_force_omni_patterns.objc = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 let g:neocomplcache_force_omni_patterns.objcpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplcache_enable_smart_case=1
+let g:neocomplcache_enable_camel_case_completion=1
+let g:neocomplcache_enable_underbar_completion = 1
+
 let g:clang_complete_auto = 0
 let g:clang_auto_select = 0
 let g:clang_use_library = 1
