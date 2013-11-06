@@ -18,6 +18,9 @@ endif
 
 Bundle 'gmarik/vundle'
 
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+
 Bundle 'xuhdev/SingleCompile'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
@@ -79,6 +82,9 @@ Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Ultisnips
 Bundle 'guns/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " <c-j> and <c-k> move to the next / previous part of the function call
 
 " Support for Clang Complete
@@ -86,7 +92,7 @@ Bundle 'guns/ultisnips'
 " I did: brew install --HEAD llvm --with-clang
 " with homebrew
 Bundle 'Rip-Rip/clang_complete'
-let g:clang_complete_auto = 0 "disalbe auto completion, alwauys <c x> <c o> to complete
+let g:clang_complete_auto = 1 "disalbe auto completion, alwauys <c x> <c o> to complete
 let g:clang_use_library = 1
 let g:clang_periodic_quickfix = 0
 let g:clang_close_preview = 1
@@ -96,6 +102,8 @@ let g:clang_snippets_engine = 'ultisnips'
 " This might change depending on your installation
 let g:clang_exec = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang'
 let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+set completeopt=menu,longest
+
 
 " Far improved support for correct indentation for objc code in vim
 Bundle "b4winckler/vim-objc"
@@ -149,8 +157,8 @@ map <DOWN> gj
 " map Emac keybind in insert mode
 imap <C-b> <Left>
 imap <C-f> <Right>
-imap <C-p> <Up>
-imap <C-n> <Down>
+"imap <C-p> <Up>
+"imap <C-n> <Down>
 imap <C-a> <Home>
 imap <C-e> <End>
 imap <S-CR> <End>;
