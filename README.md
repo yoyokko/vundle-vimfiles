@@ -17,7 +17,7 @@ you can link your `~/.vimrc` to any one of them as you wish :)
 
 3. copy files to your home directory:
 
-        git clone git://github.com/ywjno/vundle-vimfiles.git
+        git clone git://github.com/yoyokko/vundle-vimfiles.git
 
 4. make a symbolic link `.vim` to `vundle-vimfiles` that you just cloned, or just rename it to `.vim` also be fine:
 
