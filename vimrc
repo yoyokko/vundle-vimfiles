@@ -70,6 +70,10 @@ Bundle 'ywjno/vim-tomorrow-theme'
 
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
+" Ultisnips
+Bundle 'guns/ultisnips'
+" <c-j> and <c-k> move to the next / previous part of the function call
+
 " Support for Clang Complete
 " requires installation of a recent version of clang.
 " I did: brew install --HEAD llvm --with-clang
@@ -83,8 +87,8 @@ let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
 " let g:clang_debug = 1
 " This might change depending on your installation
-let g:clang_exec = '/usr/local/bin/clang'
-let g:clang_library_path = '/usr/local/lib/libclang.dylib'
+let g:clang_exec = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang'
+let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 
 " Far improved support for correct indentation for objc code in vim
 Bundle "b4winckler/vim-objc"
@@ -140,6 +144,7 @@ imap <C-p> <Up>
 imap <C-n> <Down>
 imap <C-a> <Home>
 imap <C-e> <End>
+imap <S-CR> <End>;
 
 " set gui font
 set guifont=Monaco:h14
@@ -153,4 +158,29 @@ set fileencodings=utf-8
 map <D-A> ggVG
 
 " Use neocomplcache
-" let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_max_list = 20
+let g:neocomplcache_plugin_disable = {'include_complete' : 1, 'filename_complete' : 1}
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_auto_completion_start_length = 3
+let g:neosnippet#snippets_directory = expand("~/.vim/snippets")
+if !exists('g:neocomplcache_omni_functions')
+    let g:neocomplcache_omni_functions = {}
+endif
+let g:neocomplcache_omni_functions.python = 'python_complete#Complete'
+
+" Make Neocomplache and clang_complete play together
+if !exists('g:neocomplcache_force_omni_patterns')
+    let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_overwrite_completefunc = 1
+let g:neocomplcache_force_omni_patterns.c ='[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplcache_force_omni_patterns.objc = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplcache_force_omni_patterns.objcpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
+let g:clang_use_library = 1
+let g:clang_periodic_quickfix = 0
+let g:clang_snippets = 1
+let g:clang_close_preview = 1
