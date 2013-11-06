@@ -3,14 +3,6 @@ set antialias
 set linespace=2
 set vb t_vb=
 
-if has("gui_macvim")
-  set guifont=Monaco:h14
-elseif has("gui_gtk")
-  set guifont=Monospace\ 14
-else
-  set guifont=Monaco:h14
-end
-
 if has("win32") || has("win64")
   let Tlist_Ctags_Cmd='ctags'
 
@@ -26,10 +18,10 @@ if has("win32") || has("win64")
   "reload menu with UTF-8 encoding
   source $VIMRUNTIME/delmenu.vim
   source $VIMRUNTIME/menu.vim
-end
+endif
 
 if has("gui_macvim")
-  set transparency=0
+  set transparency=1
 
   " move a line of text using ALT+[jk] or Comamnd+[jk] on mac
   nmap <D-j> mz:m+<cr>`z
@@ -54,4 +46,15 @@ if has("gui_macvim")
   for i in range(1, 9)
     exec "nnoremap <D-".i."> ".i."gt"
   endfor
+endif
+
+if has("gui_macvim")
+  set guifont=Monaco:h14
+  set guifontwide=Monaco:h14
+elseif has("gui_gtk")
+  set guifont=Monospace\ 14
+else
+  echom "other"
+  set guifont=Monaco:h14
+  set guifontwide=Monaco:h14
 endif

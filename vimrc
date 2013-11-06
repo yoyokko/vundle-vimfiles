@@ -1,4 +1,5 @@
 " Easy version Vimrc
+"
 
 set nocompatible
 filetype off
@@ -84,6 +85,10 @@ noremap <BS> X
 noremap <C-c> y
 noremap <C-v> P
 
+" map F7 & F8 to switch between tabs
+noremap <F7> :tabn
+noremap <F8> :tabp
+
 " cancel searched highlight
 noremap ; :nohlsearch<CR>
 
@@ -92,11 +97,27 @@ map j gj
 map k gk
 map <UP> gk
 map <DOWN> gj
-imap <UP> <ESC>gk<RIGHT>i
-imap <DOWN> <ESC>gj<RIGHT>i
+"imap <UP> <ESC>gk<RIGHT>i
+"imap <DOWN> <ESC>gj<RIGHT>i
+
+" map Emac keybind in insert mode
+imap <C-b> <Left>
+imap <C-f> <Right>
+imap <C-p> <Up>
+imap <C-n> <Down>
+imap <C-a> <Home>
+imap <C-e> <End>
+
+" set gui font
+set guifont=Monaco:h14
+set guifontwide=Monaco:h14
+
+" set encoding
+set encoding=utf-8
+set fileencodings=utf-8
 
 " select ALL
-map <C-A> ggVG
+map <D-A> ggVG
 
 " Use neocomplcache
 let g:neocomplcache_enable_at_startup = 1
