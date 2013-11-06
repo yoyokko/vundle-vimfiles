@@ -29,7 +29,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
+Bundle 'terhechte/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tomtom/tlib_vim'
@@ -69,6 +69,39 @@ Bundle 'jpo/vim-railscasts-theme'
 Bundle 'ywjno/vim-tomorrow-theme'
 
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+
+" Support for Clang Complete
+" requires installation of a recent version of clang.
+" I did: brew install --HEAD llvm --with-clang
+" with homebrew
+Bundle 'Rip-Rip/clang_complete'
+let g:clang_complete_auto = 0 "disalbe auto completion, alwauys <c x> <c o> to complete
+let g:clang_use_library = 1
+let g:clang_periodic_quickfix = 0
+let g:clang_close_preview = 1
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'ultisnips'
+" let g:clang_debug = 1
+" This might change depending on your installation
+let g:clang_exec = '/usr/local/bin/clang'
+let g:clang_library_path = '/usr/local/lib/libclang.dylib'
+
+" Far improved support for correct indentation for objc code in vim
+Bundle "b4winckler/vim-objc"
+
+" Adds support for :A to switch between header / implementation, and more
+Bundle 'eraserhd/vim-ios.git'
+" Keep compatibliy to XVim nc -> switches between implementation and interface
+"cab nc A
+
+" Better Objc Syntax highlighting
+Bundle 'terhechte/cocoa.vim'
+" quicker way to do list methods
+"cab lm ListMethods
+
+let g:surround_no_insert_mappings=1
+Bundle 'tpope/vim-surround'
+Bundle 'eraserhd/vim-kiwi'
 
 filetype plugin indent on
 
