@@ -110,6 +110,8 @@ Bundle 'terhechte/cocoa.vim'
 " quicker way to do list methods
 "cab lm ListMethods
 
+Bundle 'jerrymarino/xcodebuild.vim'
+
 let g:surround_no_insert_mappings=1
 Bundle 'tpope/vim-surround'
 Bundle 'eraserhd/vim-kiwi'
