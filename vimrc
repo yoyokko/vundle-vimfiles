@@ -4,6 +4,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set nobackup
 
 set nocompatible
 filetype off
@@ -64,7 +65,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'slim-template/vim-slim'
 Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'Shougo/vimfiler.vim'
@@ -81,7 +81,8 @@ Bundle 'ywjno/vim-tomorrow-theme'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Ultisnips
-Bundle 'guns/ultisnips'
+" My perfoanl forl to support more objc snippets
+Bundle 'yoyokko/ultisnips'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -157,8 +158,8 @@ map <DOWN> gj
 " map Emac keybind in insert mode
 imap <C-b> <Left>
 imap <C-f> <Right>
-"imap <C-p> <Up>
-"imap <C-n> <Down>
+imap <C-p> <Up>
+imap <C-n> <Down>
 imap <C-a> <Home>
 imap <C-e> <End>
 imap <S-CR> <End>;
