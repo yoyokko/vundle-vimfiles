@@ -92,7 +92,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " requires installation of a recent version of clang.
 " I did: brew install --HEAD llvm --with-clang
 " with homebrew
-Bundle 'Rip-Rip/clang_complete'
+Bundle 'yoyokko/clang_complete'
 let g:clang_complete_auto = 1 "disalbe auto completion, alwauys <c x> <c o> to complete
 let g:clang_use_library = 1
 let g:clang_periodic_quickfix = 0
