@@ -16,6 +16,7 @@ autocmd! BufNewFile,BufRead *.zsh-theme set filetype=zsh
 " Nginx Config
 autocmd! BufNewFile,BufRead nginx.conf set filetype=nginx
 
+" Objective-C
 autocmd! BufNewFile,BufRead *.m set filetype=objc
 autocmd! BufNewFile,BufRead *.mm set filetype=objcpp
 

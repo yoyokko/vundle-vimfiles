@@ -1,5 +1,6 @@
 " Easy version Vimrc
 "
+"
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -86,24 +87,24 @@ Bundle 'yoyokko/ultisnips'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" <c-j> and <c-k> move to the next / previous part of the function call
 
 " Support for Clang Complete
 " requires installation of a recent version of clang.
 " I did: brew install --HEAD llvm --with-clang
 " with homebrew
 Bundle 'Rip-Rip/clang_complete'
-let g:clang_complete_auto = 1 "disalbe auto completion, alwauys <c x> <c o> to complete
-let g:clang_use_library = 1
+let g:clang_complete_auto = 0 "disalbe auto completion, alwauys <c x> <c o> to complete
 let g:clang_periodic_quickfix = 0
+let g:clang_complete_copen = 1
 let g:clang_close_preview = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
+let g:clang_auto_select = 1
+let g:clang_use_library = 1
 " let g:clang_debug = 1
 " This might change depending on your installation
 let g:clang_exec = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang'
 let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
-set completeopt=menu,longest
 
 
 " Far improved support for correct indentation for objc code in vim
@@ -132,6 +133,7 @@ filetype plugin indent on
 " =============
 " add a new line without entering insert mode
 noremap <CR> o<Esc>
+noremap <Space> i<Space><Esc>
 
 " map backspce to delete a character
 noremap <BS> X
@@ -162,13 +164,6 @@ imap <C-p> <Up>
 imap <C-n> <Down>
 imap <C-a> <Home>
 imap <C-e> <End>
-imap <S-CR> <End>;
-
-" imap { {<CR>}<Up><CR>
-
-" set gui font
-set guifont=Monaco:h15
-set guifontwide=Monaco:h15
 
 " set encoding
 set encoding=utf-8
@@ -196,15 +191,9 @@ endif
 let g:neocomplcache_force_overwrite_completefunc = 1
 let g:neocomplcache_force_omni_patterns.c ='[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:neocomplcache_force_omni_patterns.objc = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:neocomplcache_force_omni_patterns.objcpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:neocomplcache_enable_smart_case=1
-let g:neocomplcache_enable_camel_case_completion=1
+let g:neocomplcache_force_omni_patterns.objc = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.objcpp = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
-
-let g:clang_complete_auto = 0
-let g:clang_auto_select = 0
-let g:clang_use_library = 1
-let g:clang_periodic_quickfix = 0
-let g:clang_snippets = 1
-let g:clang_close_preview = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_enable_ignore_case = 1
