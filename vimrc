@@ -87,7 +87,7 @@ Bundle 'SirVer/ultisnips'
 set runtimepath+=~/.vim/yoyokko
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Support for Clang Complete
 " requires installation of a recent version of clang.
