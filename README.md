@@ -1,5 +1,6 @@
-**This Vim configurations base form [kaochenlong/eddie-vim](https://github.com/kaochenlong/eddie-vim)**
-My personal Vim configurations and some plugins which I used in my daily job.
+**This Vim configurations base form [ywjno/vundle-vimfiles](https://github.com/ywjno/vundle-vimfiles)**
+
+My personal Vim configurations and some plugins which I used in iOS/Python/MardDown.
 
 I put Vim related settings in `plugin/settings/Settings.vim`, and isolate other plugins' settings in `plugin/settings` directory.
 
@@ -7,8 +8,7 @@ you can link your `~/.vimrc` to any one of them as you wish :)
 
 ## Usage
 
-### Installation and Requisites:
-( **Windows users** see [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows) PLZ)
+### Installation and Requisites: (Max OS X Only)
 
 1. BACKUP your `.vim` directory and `.vimrc` first.(IMPORTANT!)
 
@@ -34,9 +34,14 @@ you can link your `~/.vimrc` to any one of them as you wish :)
 
         git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-8. if you use Powerline under Ubuntu or something which can not show the correct icons/fonts on the bottom, you can check [this link](https://github.com/scotu/ubuntu-mono-powerline), it looks pretty nice.
-
 9. you may need to install `ack` or `silver searcher` first if you use `ack.vim`.
+
+        # install ack on mac
+        brew install ack
+
+10. make sure /Applications/Xcode.app exists, if not, link it to your xcode.
+
+        ln -s YourPathToXcode /Applications/Xcode.app
 
 ### Install bundles:
 
@@ -54,7 +59,7 @@ Launch `vim`, run `:BundleInstall!`
 
 3. some usually used key mappings in normal mode:
 
-    a. `<F1>` to toggle a Calendar window on and off.
+    a. `<F1>` to enter normal mode as `<Esc>`.
 
     b. `<F2>` to toggle NERDTree on and off.
 
@@ -64,16 +69,51 @@ Launch `vim`, run `:BundleInstall!`
 
     e. hit `<ctrl>p` will launch a quick window to match keywords from your current working directory, not only file name, but also path name. And `<ctrl>w u` will match from your MRU(Mostly Recent Used) files, which is also frequently used.
 
-    f. hit `<leader>` twice to toggle comment on and off.
+    f. hit `<leader>` twice to toggle comment on and off. ('\' called leader in vim)
 
     g. `<tab>` and `<shift><tab>` to increase and decrease the syntax identation.
+
+    h. `<D-'>` and `<D-">` to goto next and previous parameter when using ultisnipts.
+
+    i. `<C-CR>` to show clang auto completetion list which ignor input case.
+
+    j. `<4>` to end of the line. Same as `<S-4>`.
+
+    k. `<;>` to cancel search highlight.
+
+    l. `<c-e><c-a><c-n><c-p><c-f><c-b>` in insert mode to goto end of line, head of line, next line, previous line, next word, previous word.
+
+    m. `<Space>` to insert a space in normal mode.
 
 4. Remove tailing whitespace automatically while saving.
 
 ## FAQ
 
-if you can not found `ctags` command, just find your ctags path and replace my settings in `plugin/settings/Ctags.vim` file:
+A: if you can not found `ctags` command, just find your ctags path and replace my settings in `plugin/settings/Ctags.vim` file:
 
     let g:tagbar_ctags_bin = '/your/path/to/ctags'
 
 and [Exuberant Ctags](http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz) is recommended.
+
+
+B: How to use clang_complete to complete objective-c? [Reference](http://objvimmer.com/blog/2012/08/17/objective-c-code-completion-in-vim/)
+
+    cd 'YourProjectPath which contains xcode project file'
+    xcodebuild -target YourTarget > build.log
+
+Open build.log and find `clang -x objective` which compiled one of your source code file. Copy that line till the `xxxx.o`
+
+    mvim .clang_complete
+
+Paste the copied line into mvim and do following steps:
+
+1. Remove the first shell word (clang and it's path).
+2. Remove the -o output-file argument at the end.
+3. Remove the path of the file being compiled.
+4. Add `-I./ReleavePathToYourClassFiles`. If you have more than one folder contains code and headers, one line for each.
+5. Save the file.
+6. mvim your class .m file and hit `<C-CR>` to show the completetion list.
+
+C: How to define your custom completetion snippets.
+
+Open `~/.vim/yoyokko/UltiSnips/YourLanguage.snippets` file to write your custom snippets. UltiSnips do have buildin snippets in `~/.vim/bundle/ultisnips/UltiSnips/`.

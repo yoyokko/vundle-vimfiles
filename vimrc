@@ -125,8 +125,12 @@ Bundle 'terhechte/cocoa.vim'
 Bundle 'jerrymarino/xcodebuild.vim'
 
 let g:surround_no_insert_mappings=1
+
 Bundle 'tpope/vim-surround'
 Bundle 'eraserhd/vim-kiwi'
+
+Bundle 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled=1
 
 filetype plugin indent on
 
@@ -149,6 +153,7 @@ noremap <F7> :tabn
 noremap <F8> :tabp
 imap <F1> <Esc>
 map <F1> <Esc>
+noremap 4 <End>
 
 " cancel searched highlight
 noremap ; :nohlsearch<CR>
@@ -202,3 +207,5 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_enable_ignore_case = 1
 
 set completeopt=longest,menuone
+
+colorscheme molokai
