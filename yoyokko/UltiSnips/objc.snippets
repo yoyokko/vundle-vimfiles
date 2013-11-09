@@ -1,0 +1,82 @@
+###########################################################################
+
+#                            TextMate Snippets                            #
+###########################################################################
+
+snippet imp "#import (imp)" b
+#import "${1:`!p snip.rv = re.sub(r'\..*$', '.h', fn)`}"
+endsnippet
+
+snippet alloc "[[ClassName alloc] initXXX];"
+${1:ClassName} *${2:variableName} = [[$1 alloc] init${3}];
+endsnippet
+
+snippet rele "[object release];"
+[${1:object} release]; $1 = nil;
+endsnippet
+
+snippet cfrele "if (xxx != NULL) CFRelease(xxx);"
+if (${1:pointerValue} != NULL)
+{
+	CFRelease($1);
+	$1 = NULL;
+}
+endsnippet
+
+snippet deler "Delegate Responds to Selector - my version" !
+if ([${1:self.delegate} respondsToSelector:@selector(${2:selfDidSomething})])
+{
+	[$1 $2$0];
+}
+endsnippet
+
+snippet pro "@property (xxx, xxx) name;"
+@property (nonatomic, ${1:retain}) ${2:Type} ${3:name};
+endsnippet
+
+snippet pros "@property (xxx, copy) NSString *name;"
+@property (nonatomic, copy) NSString *${1:name};
+endsnippet
+
+snippet if "if () {}"
+if (${1:condition})
+{
+	${2}
+}
+endsnippet
+snippet ret "return type;"
+return $0;
+endsnippet
+snippet - "- (returnType) methodName (definition)"
+- (${1:returnType}) ${2:methodName};
+endsnippet
+
+snippet -m "- (returnType) methodName (implementation)"
+- (${1:returnType}) ${2:methodName}
+{
+	${3}
+}
+endsnippet
+
+snippet defb "typedef block"
+typedef ${1:returnType} (^${2:TypeName})(${3:parameterTypes});
+endsnippet
+
+snippet disam "dispatch_async_main"
+dispatch_async(dispatch_get_main_queue(), ^{
+	${1:statements}
+};
+endsnippet
+
+snippet disab "dispatch_async_background"
+dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+	${1:statements}
+};
+endsnippet
+
+snippet enum "NS_ENUM def"
+typedef NS_ENUM(${1:type}, ${2:name})
+{
+    ${3:enumname} = ${4:enumvalue},
+};
+endsnippet

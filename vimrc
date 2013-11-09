@@ -82,11 +82,12 @@ Bundle 'ywjno/vim-tomorrow-theme'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Ultisnips
-" My perfoanl forl to support more objc snippets
-Bundle 'yoyokko/ultisnips'
+Bundle 'sirver/ultisnips'
+" add my personal custom snippets files to runtimepath
+set runtimepath+=~/.vim/yoyokko
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsJumpBackwardTrigger="<tab>"
 
 " Support for Clang Complete
 " requires installation of a recent version of clang.
@@ -198,5 +199,6 @@ let g:neocomplcache_force_omni_patterns.objc = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_force_omni_patterns.objcpp = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_enable_ignore_case = 1
+
+set completeopt=longest,menuone
