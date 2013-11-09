@@ -146,6 +146,8 @@ noremap <C-v> P
 " map F7 & F8 to switch between tabs
 noremap <F7> :tabn
 noremap <F8> :tabp
+imap <F1> <Esc>
+map <F1> <Esc>
 
 " cancel searched highlight
 noremap ; :nohlsearch<CR>
