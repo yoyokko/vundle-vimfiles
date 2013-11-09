@@ -82,7 +82,7 @@ Bundle 'ywjno/vim-tomorrow-theme'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Ultisnips
-Bundle 'sirver/ultisnips'
+Bundle 'SirVer/ultisnips'
 " add my personal custom snippets files to runtimepath
 set runtimepath+=~/.vim/yoyokko
 let g:UltiSnipsExpandTrigger="<tab>"
