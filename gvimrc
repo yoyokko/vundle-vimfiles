@@ -2,6 +2,7 @@ set guioptions=ce
 set antialias
 set linespace=2
 set vb t_vb=
+set fu
 
 if has("win32") || has("win64")
   let Tlist_Ctags_Cmd='ctags'

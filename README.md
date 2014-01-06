@@ -98,21 +98,7 @@ and [Exuberant Ctags](http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz)
 
 B: How to use clang_complete to complete objective-c? [Reference](http://objvimmer.com/blog/2012/08/17/objective-c-code-completion-in-vim/)
 
-    cd 'YourProjectPath which contains xcode project file'
-    xcodebuild -target YourTarget > build.log
-
-Open build.log and find `clang -x objective` which compiled one of your source code file. Copy that line till the `xxxx.o`
-
-    mvim .clang_complete
-
-Paste the copied line into mvim and do following steps:
-
-1. Remove the first shell word (clang and it's path).
-2. Remove the -o output-file argument at the end.
-3. Remove the path of the file being compiled.
-4. Add `-I./ReleavePathToYourClassFiles`. If you have more than one folder contains code and headers, one line for each.
-5. Save the file.
-6. mvim your class .m file and hit `<C-CR>` to show the completetion list.
+Use this script to generate the .clang_complete file. [Script](https://github.com/yoyokko/Tools/blob/master/clang_complete/clang_complete.py)
 
 C: How to define your custom completetion snippets.
 
