@@ -20,6 +20,7 @@ endif
 
 Bundle 'gmarik/vundle'
 
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
@@ -208,4 +209,10 @@ let g:neocomplcache_enable_ignore_case = 1
 
 set completeopt=longest,menuone
 
-colorscheme molokai
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+
+colorscheme solarized
