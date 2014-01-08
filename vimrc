@@ -166,7 +166,6 @@ noremap <F7> :tabn
 noremap <F8> :tabp
 imap <F1> <Esc>
 map <F1> <Esc>
-noremap 4 <End>
 
 " cancel searched highlight
 noremap ; :nohlsearch<CR>
