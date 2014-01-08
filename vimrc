@@ -30,7 +30,12 @@ Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/c.vim'
 Bundle 'c9s/colorselector.vim'
 Bundle 'kien/ctrlp.vim'
+
 Bundle 'Raimondi/delimitMate'
+let delimitMate_expand_cr = 1
+
+Bundle 'airblade/vim-rooter.git'
+
 Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'Shougo/neocomplcache.vim'
@@ -41,6 +46,13 @@ Bundle 'AndrewRadev/splitjoin.vim'
 
 Bundle 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType="<c-n>"
+
+Bundle 'Yggdroot/indentLine.git'
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
+let g:indentLine_char = '|'
+
+
 
 Bundle 'terhechte/syntastic'
 Bundle 'majutsushi/tagbar'
