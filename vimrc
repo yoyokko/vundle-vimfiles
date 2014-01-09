@@ -193,8 +193,9 @@ set fileencodings=utf-8
 " select ALL
 map <D-A> ggVG
 
+
 " Use neocomplcache
-let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 0
 let g:neocomplcache_max_list = 20
 let g:neocomplcache_plugin_disable = {'include_complete' : 1, 'filename_complete' : 1}
 let g:neocomplcache_min_syntax_length = 3
@@ -227,3 +228,5 @@ else
 endif
 
 colorscheme solarized
+
+
