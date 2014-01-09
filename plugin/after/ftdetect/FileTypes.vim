@@ -20,6 +20,9 @@ autocmd! BufNewFile,BufRead nginx.conf set filetype=nginx
 autocmd! BufNewFile,BufRead *.m set filetype=objc
 autocmd! BufNewFile,BufRead *.mm set filetype=objcpp
 
+" Java
+autocmd! BufNewFile,BufRead *.java set filetype=java
+
 " C
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
 
