@@ -193,9 +193,8 @@ set fileencodings=utf-8
 " select ALL
 map <D-A> ggVG
 
-
 " Use neocomplcache
-let g:neocomplcache_enable_at_startup = 0
+let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_list = 20
 let g:neocomplcache_plugin_disable = {'include_complete' : 1, 'filename_complete' : 1}
 let g:neocomplcache_min_syntax_length = 3
@@ -204,17 +203,19 @@ let g:neosnippet#snippets_directory = expand("~/.vim/snippets")
 if !exists('g:neocomplcache_omni_functions')
     let g:neocomplcache_omni_functions = {}
 endif
+let g:neocomplcache_force_overwrite_completefunc = 1
 let g:neocomplcache_omni_functions.python = 'python_complete#Complete'
+let g:neocomplcache_omni_functions.java = 'eclim#java#complete#CodeComplete'
 
 " Make Neocomplache and clang_complete play together
 if !exists('g:neocomplcache_force_omni_patterns')
     let g:neocomplcache_force_omni_patterns = {}
 endif
-let g:neocomplcache_force_overwrite_completefunc = 1
 let g:neocomplcache_force_omni_patterns.c ='[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 let g:neocomplcache_force_omni_patterns.objc = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_force_omni_patterns.objcpp = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.java = '\k\.\k*'
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_enable_ignore_case = 1
