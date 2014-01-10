@@ -41,7 +41,27 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Shougo/neosnippet'
 Bundle 'scrooloose/nerdtree'
+
+" Syntastic
 Bundle 'cakebaker/scss-syntax.vim'
+" highlight SyntasticErrorSign guifg=white guibg=red
+" highlight SyntasticErrorLine guibg=red
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_enable_signs = 0
+let g:syntastic_enable_ballons = 0
+let g:syntastic_quiet_warnings = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_java_checkers = ['checkstyle', 'javac']
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_mode_map = { 'mode': 'active',
+                         \ 'active_filetypes': ['ruby', 'cpp', 'c', 'java'],
+                         \ 'passive_filetypes': [''] }
+let g:syntastic_java_javac_classpath = '~/Applications/adt-bundle-mac/sdk/platforms/android-19'
+
 Bundle 'AndrewRadev/splitjoin.vim'
 
 Bundle 'ervandew/supertab'
