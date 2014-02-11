@@ -23,8 +23,13 @@ autocmd! BufNewFile,BufRead *.mm set filetype=objcpp
 " Java
 autocmd! BufNewFile,BufRead *.java set filetype=java
 
+" Python
+autocmd! BufNewFile,BufRead *.py set filetype=python
+autocmd! FileType python setlocal shiftwidth=4 tabstop=4
+
 " C
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
+autocmd FileType cpp setlocal shiftwidth=4 tabstop=4
 
 " Java
 autocmd FileType java setlocal shiftwidth=4 tabstop=4

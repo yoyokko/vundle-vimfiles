@@ -162,6 +162,13 @@ let g:surround_no_insert_mappings=1
 Bundle 'tpope/vim-surround'
 Bundle 'eraserhd/vim-kiwi'
 
+Bundle 'klen/python-mode'
+let g:pymode=1
+let g:pymode_trim_whitespaces=1
+let g:pymode_folding=1
+let g:pymode_lint_cwindow=0
+let g:pymode_rope_completion=0
+
 Bundle 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
 
@@ -224,7 +231,7 @@ if !exists('g:neocomplcache_omni_functions')
     let g:neocomplcache_omni_functions = {}
 endif
 let g:neocomplcache_force_overwrite_completefunc = 1
-let g:neocomplcache_omni_functions.python = 'python_complete#Complete'
+let g:neocomplcache_omni_functions.python = 'pythoncomplete#Complete'
 let g:neocomplcache_omni_functions.java = 'eclim#java#complete#CodeComplete'
 
 " Make Neocomplache and clang_complete play together
@@ -250,4 +257,4 @@ endif
 
 colorscheme solarized
 
-
+set tags=tags;/
