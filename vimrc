@@ -54,9 +54,11 @@ let g:syntastic_enable_ballons = 0
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_java_checkers = ['checkstyle', 'javac']
+let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_c_checkers = ['gcc']
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'active',
-                         \ 'active_filetypes': ['ruby', 'cpp', 'c', 'java'],
+                         \ 'active_filetypes': ['objc', 'python', 'objc++', 'cpp', 'c', 'java'],
                          \ 'passive_filetypes': [''] }
 let g:syntastic_java_javac_classpath = '~/Applications/adt-bundle-mac/sdk/platforms/android-19'
 
@@ -107,13 +109,17 @@ Bundle 'ywjno/vim-tomorrow-theme'
 
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
+Bundle 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = '<C-Tab>'
+
 " Ultisnips
 Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 " add my personal custom snippets files to runtimepath
 set runtimepath+=~/.vim/yoyokko
-let g:UltiSnipsExpandTrigger="<C-CR>"
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 Bundle 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
@@ -122,6 +128,8 @@ nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gdd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = '>*'
+let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
 
 " Far improved support for correct indentation for objc code in vim
 Bundle "b4winckler/vim-objc"
