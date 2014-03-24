@@ -135,7 +135,7 @@ let g:clang_close_preview = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
 let g:clang_auto_select = 1
-let g:clang_use_library = 1
+let g:clang_user_option = '|| exit 0'
 " let g:clang_debug = 1
 " This might change depending on your installation
 let g:clang_exec = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang'
@@ -154,8 +154,6 @@ Bundle 'eraserhd/vim-ios.git'
 Bundle 'terhechte/cocoa.vim'
 " quicker way to do list methods
 "cab lm ListMethods
-
-Bundle 'jerrymarino/xcodebuild.vim'
 
 let g:surround_no_insert_mappings=1
 
