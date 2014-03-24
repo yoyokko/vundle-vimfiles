@@ -41,7 +41,7 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'scrooloose/nerdtree'
 
 " Syntastic
-Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'scrooloose/syntastic'
 " highlight SyntasticErrorSign guifg=white guibg=red
 " highlight SyntasticErrorLine guibg=red
 let g:syntastic_check_on_open = 0
@@ -51,7 +51,7 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_enable_signs = 0
 let g:syntastic_enable_ballons = 0
-let g:syntastic_quiet_warnings = 1
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_java_checkers = ['checkstyle', 'javac']
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
@@ -68,7 +68,6 @@ let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '|'
 
 
-Bundle 'terhechte/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tomtom/tlib_vim'
@@ -117,7 +116,12 @@ let g:UltiSnipsJumpForwardTrigger="<C-b>"
 let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 Bundle 'Valloric/YouCompleteMe'
-" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+nnoremap <leader>gdc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gdd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
 
 " Far improved support for correct indentation for objc code in vim
 Bundle "b4winckler/vim-objc"
