@@ -102,7 +102,7 @@ B: How to use [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) to comp
 * [Better semantic completion triggering for Objective-C · Issue #84 · Valloric/YouCompleteMe GitHub](https://github.com/Valloric/YouCompleteMe/issues/84)
 * [How to Make YouCompleteMe Compatible With UltiSnips](http://0x3f.org/blog/make-youcompleteme-ultisnips-compatible/)
 
-Use this script to generate the .ycm_extra_conf.py file for iOS projects. [Script](https://gist.github.com/yoyokko/9764312)
+Use this script to generate the `.ycm_extra_conf.py` file for iOS projects. [Script](https://gist.github.com/yoyokko/9764312)
 
 C: How to define your custom completetion snippets.
 
