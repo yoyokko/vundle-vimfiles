@@ -96,9 +96,13 @@ A: if you can not found `ctags` command, just find your ctags path and replace m
 and [Exuberant Ctags](http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz) is recommended.
 
 
-B: How to use clang_complete to complete objective-c? [Reference](http://objvimmer.com/blog/2012/08/17/objective-c-code-completion-in-vim/)
+B: How to use [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) to complete objective-c? 
 
-Use this script to generate the .clang_complete file. [Script](https://github.com/yoyokko/Tools/blob/master/clang_complete/clang_complete.py)
+* [YouCompleteMe by Valloric](http://valloric.github.io/YouCompleteMe/)
+* [Better semantic completion triggering for Objective-C · Issue #84 · Valloric/YouCompleteMe GitHub](https://github.com/Valloric/YouCompleteMe/issues/84)
+* [How to Make YouCompleteMe Compatible With UltiSnips](http://0x3f.org/blog/make-youcompleteme-ultisnips-compatible/)
+
+Use this script to generate the .ycm_extra_conf.py file for iOS projects. [Script](https://gist.github.com/yoyokko/9764312)
 
 C: How to define your custom completetion snippets.
 
