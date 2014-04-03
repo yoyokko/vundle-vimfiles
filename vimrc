@@ -21,6 +21,12 @@ endif
 Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
+
+Bundle 'vim-scripts/DoxygenToolkit.vim'
+let g:DoxygenToolkit_authorName = 'Edward Chen'
+let g:DoxygenToolkit_licenseTag = 'IntSig Information Co., Ltd'
+
+
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
@@ -135,9 +141,7 @@ let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
 Bundle "b4winckler/vim-objc"
 
 " Adds support for :A to switch between header / implementation, and more
-Bundle 'eraserhd/vim-ios.git'
-" Keep compatibliy to XVim nc -> switches between implementation and interface
-"cab nc A
+Bundle 'yoyokko/a.vim'
 
 " Better Objc Syntax highlighting
 Bundle 'terhechte/cocoa.vim'
