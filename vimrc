@@ -33,7 +33,9 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'xuhdev/SingleCompile'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
+
 Bundle 'vim-scripts/c.vim'
+
 Bundle 'c9s/colorselector.vim'
 Bundle 'kien/ctrlp.vim'
 
@@ -222,3 +224,20 @@ endif
 colorscheme solarized
 
 set tags=tags;/
+
+
+
+
+function! s:insert_gates()
+  let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
+  execute "normal! o"
+  execute "normal! Gi#ifndef " . gatename
+  execute "normal! o#define " . gatename
+  execute "normal! o"
+  execute "normal! o"
+  execute "normal! o"
+  execute "normal! Go#endif /* " . gatename . " */"
+  normal! kkk
+endfunction
+
+autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()

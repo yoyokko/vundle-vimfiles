@@ -18,7 +18,7 @@ autocmd! BufNewFile,BufRead nginx.conf set filetype=nginx
 
 " Objective-C
 autocmd! BufNewFile,BufRead *.m set filetype=objc
-autocmd! BufNewFile,BufRead *.mm set filetype=objcpp
+autocmd! BufNewFile,BufRead *.mm set filetype=objc
 
 " Java
 autocmd! BufNewFile,BufRead *.java set filetype=java
