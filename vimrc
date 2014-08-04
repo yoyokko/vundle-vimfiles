@@ -48,6 +48,11 @@ Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'scrooloose/nerdtree'
 
+" auto format
+Bundle "Chiel92/vim-autoformat"
+noremap <F3> :Autoformat<CR><CR>
+
+
 " Syntastic
 Bundle 'scrooloose/syntastic'
 " highlight SyntasticErrorSign guifg=white guibg=red
