@@ -23,9 +23,13 @@ autocmd! BufNewFile,BufRead *.mm set filetype=objc
 " Java
 autocmd! BufNewFile,BufRead *.java set filetype=java
 
+" Lua
+autocmd! BufNewFile,BufRead *.lua set filetype=lua
+autocmd FileType lua setlocal shiftwidth=4 tabstop=4
+
 " Python
 autocmd! BufNewFile,BufRead *.py set filetype=python
-autocmd! FileType python setlocal shiftwidth=4 tabstop=4
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " C
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
@@ -36,3 +40,5 @@ autocmd FileType java setlocal shiftwidth=4 tabstop=4
 
 autocmd FileType objc setlocal shiftwidth=4 tabstop=4
 autocmd FileType objcpp setlocal shiftwidth=4 tabstop=4
+
+au BufRead,BufNewFile /etc/nginx/*,*/ngx_conf/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif

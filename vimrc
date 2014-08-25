@@ -86,11 +86,16 @@ Bundle "xolox/vim-misc"
 Bundle "xolox/vim-lua-ftplugin"
 Bundle "xolox/vim-lua-inspect"
 let g:lua_complete_omni = 1
+let g:loaded_luainspect = 1
 let g:lua_inspect_mappings = 0
 let g:lua_inspect_warnings = 0
+let g:lua_inspect_events = ''
 inoremap <buffer> <silent> <F5> <C-o>:LuaInspectRename<CR>
 nnoremap <buffer> <silent> <F5> :LuaInspectRename<CR>
 nnoremap <buffer> <silent> gd :LuaInspectGoTo<CR
+
+" Nginx
+Bundle "evanmiller/nginx-vim-syntax"
 
 " Syntastic
 Bundle 'scrooloose/syntastic'
