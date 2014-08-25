@@ -70,6 +70,7 @@ Bundle 'Raimondi/delimitMate'
 let delimitMate_expand_cr = 1
 
 Bundle 'airblade/vim-rooter.git'
+map <silent> <unique> <Leader>ctrd <Plug>RooterChangeToRootDirectory
 
 Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/matchit.zip'
@@ -79,6 +80,17 @@ Bundle 'scrooloose/nerdtree'
 Bundle "Chiel92/vim-autoformat"
 noremap <F3> :Autoformat<CR><CR>
 
+" Lua
+Bundle "vim-scripts/Lua-Support-2"
+Bundle "xolox/vim-misc"
+Bundle "xolox/vim-lua-ftplugin"
+Bundle "xolox/vim-lua-inspect"
+let g:lua_complete_omni = 1
+let g:lua_inspect_mappings = 0
+let g:lua_inspect_warnings = 0
+inoremap <buffer> <silent> <F5> <C-o>:LuaInspectRename<CR>
+nnoremap <buffer> <silent> <F5> :LuaInspectRename<CR>
+nnoremap <buffer> <silent> gd :LuaInspectGoTo<CR
 
 " Syntastic
 Bundle 'scrooloose/syntastic'
