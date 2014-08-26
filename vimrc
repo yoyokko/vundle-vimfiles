@@ -81,12 +81,20 @@ Bundle "Chiel92/vim-autoformat"
 noremap <F3> :Autoformat<CR><CR>
 
 " Lua
-Bundle "vim-scripts/Lua-Support-2"
 Bundle "xolox/vim-misc"
 Bundle "xolox/vim-lua-ftplugin"
 Bundle "xolox/vim-lua-inspect"
-let g:lua_complete_omni = 1
-let g:loaded_luainspect = 1
+let g:lua_check_syntax = 1  " done via syntastic
+let g:lua_complete_keywords = 1 " interferes with YouCompleteMe
+let g:lua_complete_globals = 1  " interferes with YouCompleteMe?
+let g:lua_complete_library = 1  " interferes with YouCompleteMe
+let g:lua_complete_dynamic = 1  " interferes with YouCompleteMe
+let g:lua_complete_omni = 1     " Disabled by default. Likely to crash Vim!
+let g:lua_omni_blacklist = ['pl\.strict', 'lgi\..']
+let g:lua_define_omnifunc = 1  " must be enabled also (g:lua_complete_omni=1, but crashes Vim!)
+let g:lua_define_completion_mappings = 0
+let g:lua_internal = 0"
+
 let g:lua_inspect_mappings = 0
 let g:lua_inspect_warnings = 0
 let g:lua_inspect_events = ''
@@ -118,6 +126,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
                          \ 'active_filetypes': ['objc', 'python', 'objc++', 'cpp', 'c', 'java'],
                          \ 'passive_filetypes': [''] }
 let g:syntastic_java_javac_classpath = '~/Applications/adt-bundle-mac/sdk/platforms/android-19'
+let g:syntastic_auto_loc_list = 1
 
 Bundle 'AndrewRadev/splitjoin.vim'
 
