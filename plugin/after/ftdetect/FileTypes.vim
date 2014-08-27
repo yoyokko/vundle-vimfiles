@@ -42,3 +42,5 @@ autocmd FileType objc setlocal shiftwidth=4 tabstop=4
 autocmd FileType objcpp setlocal shiftwidth=4 tabstop=4
 
 au BufRead,BufNewFile /etc/nginx/*,*/ngx_conf/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
+autocmd FileType nginx setlocal shiftwidth=4 tabstop=4
+
