@@ -102,8 +102,8 @@ noremap <F7> gT
 noremap <F8> gt
 
 " identation
-nmap <TAB> v>
-nmap <S-TAB> v<
+" nmap <TAB> v>
+" nmap <S-TAB> v<
 vmap <TAB> >gv
 vmap <S-TAB> <gv
 
