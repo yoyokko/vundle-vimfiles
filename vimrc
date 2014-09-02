@@ -283,6 +283,7 @@ colorscheme solarized
 set tags=tags;/
 
 
+imap ✠ <S-CR>
 
 
 function! s:insert_gates()
