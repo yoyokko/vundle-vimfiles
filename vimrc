@@ -299,3 +299,10 @@ function! s:insert_gates()
 endfunction
 
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
+
+" vimgdb setting
+let g:vimgdb_debug_file = ""
+run macros/gdb_mappings.vim
+
+
+
