@@ -59,9 +59,10 @@ Bundle 'rizzatti/dash.vim'
 
 Bundle 'xuhdev/SingleCompile'
 Bundle 'mileszs/ack.vim'
-Bundle 'vim-scripts/bufexplorer.zip'
+" Bundle 'vim-scripts/bufexplorer.zip'
 
 Bundle 'vim-scripts/c.vim'
+Bundle 'vim-scripts/IndexedSearch'
 
 Bundle 'c9s/colorselector.vim'
 Bundle 'kien/ctrlp.vim'
