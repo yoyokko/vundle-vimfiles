@@ -71,6 +71,7 @@ Bundle 'Raimondi/delimitMate'
 let delimitMate_expand_cr = 1
 
 Bundle 'airblade/vim-rooter.git'
+let g:rooter_manual_only = 1
 map <silent> <unique> <Leader>ctrd <Plug>RooterChangeToRootDirectory
 
 Bundle 'mattn/emmet-vim'
