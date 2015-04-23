@@ -221,6 +221,7 @@ let g:pymode_folding=1
 let g:pymode_lint_cwindow=0
 let g:pymode_rope_completion=0
 let g:pymode_rope=0
+let g:pymode_rope_lookup_project = 0
 
 Bundle 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
@@ -265,6 +266,7 @@ imap <C-p> <Up>
 imap <C-n> <Down>
 imap <C-a> <Home>
 imap <C-e> <End>
+inoremap <C-c> <ESC>`^
 
 " set encoding
 set encoding=utf-8
