@@ -6,6 +6,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set nobackup
+set foldmethod=syntax
+set nofoldenable
 
 set nocompatible
 filetype off
@@ -190,6 +192,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 Bundle 'yoyokko/YouCompleteMe'
 set ttimeoutlen=50
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 1
+let g:ycm_extra_conf_globlist = ['~/*','!/media/psf/Home/*']
 nnoremap <leader>gdc :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gdd :YcmCompleter GoToDefinitionElseDeclaration<CR>
