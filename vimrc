@@ -189,7 +189,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-Bundle 'yoyokko/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 set ttimeoutlen=50
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 1
